@@ -15,3 +15,13 @@ class Manager extends Employee {
 }
 
 module.exports = Manager;
+
+const splinter = new Manager('Splinter', 100000, 'Sensei');
+console.log('Before: ', splinter);
+
+const leo = new Employee('Leonardo', 90000, 'Ninja', splinter);
+const mikey = new Employee('Michelangelo', 90000, 'Ninja', splinter);
+const donnie = new Employee('Donatello', 90000, 'Ninja', splinter);
+const raph = new Employee('Raphael', 90000, 'Ninja', splinter);
+
+console.log('After: ', splinter);

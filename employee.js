@@ -1,3 +1,4 @@
+
 class Employee {
     constructor(name, salary, title, manager) {
         this.name = name;
@@ -6,6 +7,7 @@ class Employee {
         this.manager = null;
         if(manager) {
             this.manager = manager
+            manager.addEmployee(this);
         }
         
     }
@@ -13,5 +15,3 @@ class Employee {
 
 module.exports = Employee;
 
-const leo = new Employee('Leonardo', 90000, 'Ninja');
-console.log(leo)
